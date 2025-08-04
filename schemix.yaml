@@ -1,0 +1,31 @@
+# Schemix プロジェクト設定ファイル
+project:
+  name: "example-project"
+  version: "0.1.0"
+  description: "A sample Schemix project"
+
+# 依存関係とライブラリ設定
+dependencies:
+  # カスタムライブラリパス
+  libraries:
+    - "./lib"
+    - "~/.schemix/libraries"
+
+# ビルド設定
+build:
+  # 出力ディレクトリ
+  output_dir: "./build"
+  
+  # KiCadファイル生成設定
+  kicad:
+    generate_schematic: true
+    generate_pcb: true
+    generate_project: true
+
+# コンポーネント設定
+components:
+  # デフォルトコンポーネントライブラリ
+  default_library: "standard"
+  
+  # カスタムコンポーネントパス
+  custom_components: "./src/components"
